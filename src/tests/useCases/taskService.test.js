@@ -8,7 +8,7 @@ jest.mock("../../../src/useCases/taskService", () => ({
         }
     })
 }));
-describe('Should test duplicated items', () => {
+describe('Should test if has items', () => {
     it("Mock isDuplicated fn", async () => {
         const req = {
             body: {
