@@ -1,5 +1,5 @@
-const service = require("../../useCases/taskService")
-jest.mock("../../../src/useCases/taskService", () => ({
+const service = require("../../useCases/VerifyTaskDuplicated")
+jest.mock("../../../src/useCases/VerifyTaskDuplicated", () => ({
     isDuplicated: jest.fn().mockResolvedValue({ 
         req: {
             body: {
