@@ -1,4 +1,4 @@
-const service = require("../../useCases/VerifyTaskDuplicated")
+const verifyTaskDuplicated = require("../../useCases/verifyTaskDuplicated")
 jest.mock("../../../src/useCases/VerifyTaskDuplicated", () => ({
     isDuplicated: jest.fn().mockResolvedValue({ 
         req: {
@@ -15,14 +15,14 @@ describe('Should test if has items', () => {
                 title: "Task #01"
             }
         };
-        service.isDuplicated.mockResolvedValueOnce({ 
+        verifyTaskDuplicated.isDuplicated.mockResolvedValueOnce({ 
             req: {
                 body: {
                     title: "Task #01"
                 }
             }
         })
-        const data = await service.isDuplicated(req);
+        const data = await verifyTaskDuplicated.isDuplicated(req);
         expect(data).toEqual({ 
             req: {
                 body: {
