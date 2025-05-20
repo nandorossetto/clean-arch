@@ -1,5 +1,5 @@
 const TaskModel = require("../../entities/Task");
-const taskService  = require("../../useCases/verifyTaskDuplicated");
+const taskService  = require("../../useCases/verifyTaskDuplicatedService");
 const createTaskController = {
     create: async(req, res) => {
         try{
