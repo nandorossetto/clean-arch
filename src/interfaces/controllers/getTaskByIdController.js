@@ -5,8 +5,7 @@ const getTaskByIdController = {
         try{
             const exists = await taskService.exists(id);
             if(exists){
-                const tasks = await taskService.exists(id);
-                return res.status(200).json(tasks);
+                return res.status(200).json(exists);
             }
             return res.status(404).json({msg: "Task not found!"});
         }catch(error){
